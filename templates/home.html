@@ -9,11 +9,11 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #808080;
         }
         header {
-            background-color: #222;
-            color: white;
+            background-color: #6A5ACD;
+            color: black;
             text-align: center;
             padding: 15px;
             font-size: 24px;
@@ -58,11 +58,11 @@
 <body>
 
 <header>
-    📱 Telefon Do‘koni - Eng Yaxshi Telefonlar!
+    📱 Phone Market - Sifatli va zamonaviy telefonlar!
 </header>
 
 <div class="container">
-    <a href="{% url 'phone-list' %}"> Bizning Telefonlar</a>
+    <a href="{% url 'phone-list' %}"> Mavjud Telefonlar</a>
     <div class="phone-list">
         {% for phone in phones %}
         <div class="phone">
@@ -85,7 +85,7 @@
 <div class="contact">
     <h2>Biz bilan bog‘laning</h2>
     <p>Telefon: +998 90 123 45 67</p>
-    <p>Manzil: Toshkent, Amir Temur ko‘chasi, 15</p>
+    <p>Manzil: BUxoro, Alpomish ko‘chasi, 15</p>
 </div>
 
 </body>

@@ -9,14 +9,19 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: #B2DFDB; /* Past feruza rang */
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/47/Uzbek_traditional_pattern.jpg'); /* O'zbek milliy naqshi */
+            background-size: cover;
+            background-attachment: fixed;
         }
         header {
-            background-color: #222;
+            background: linear-gradient(135deg, #222, #444);
             color: white;
             text-align: center;
-            padding: 15px;
-            font-size: 24px;
+            padding: 20px;
+            font-size: 26px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
         .container {
             width: 90%;
@@ -31,25 +36,36 @@
             justify-content: center;
         }
         .phone {
-            background: white;
+            background: #FFFFFF;
             padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             width: 300px;
             text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .phone:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
         .phone img {
             width: 100%;
             height: auto;
-            border-radius: 8px;
-            cursor: pointer; /* Rasm ustiga bosish mumkinligini bildiradi */
+            border-radius: 10px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .phone img:hover {
+            opacity: 0.8;
         }
         .phone h3 {
             margin: 10px 0;
+            font-size: 18px;
+            color: #333;
         }
         .phone p {
             font-size: 16px;
-            color: #444;
+            color: #555;
         }
         a {
             text-decoration: none;
@@ -60,7 +76,9 @@
 <body>
 
 <header>
-    📱 Telefon Do‘koni - Bizning Telefonlar
+    <a href="{% url 'home' %}"> 📱 Telefon Do‘koni - Bizning Telefonlar </a><hr>
+    <a href="{% url 'phone-create' %}"> Telefon qo'shish</a>
+
 </header>
 
 <div class="container">

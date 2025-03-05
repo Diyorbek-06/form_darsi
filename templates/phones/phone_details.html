@@ -102,7 +102,9 @@
         <p>{{ phone.description }}</p>
     </div>
 
-    <a href="{% url 'phones/phone-list' %}" class="back-btn">⬅️ Orqaga</a>
+    <a href="{% url 'phone-list' %}" class="back-btn">⬅️ Orqaga</a>
+    <a href="{% url 'phone-update' phone.id %}" class="back-btn">⬅️ Update</a>
+    <a href="{% url 'phone-delete' phone.id%}" class="back-btn">⬅️ Delete</a>
 </div>
 
 </body>
